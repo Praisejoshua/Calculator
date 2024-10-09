@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h2>Simple Calculator</h2>
+    </div>
+    
+    <form method="POST" class="calculator-form">
+        {{ form.hidden_tag() }}
+        <input type="text" name="expression" value="{{ expression }}" readonly><br>
+        
+        <!-- Row 1 -->
+        <div>
+            {{ form.num1(class="btn") }}
+            {{ form.num2(class="btn") }}
+            {{ form.num3(class="btn") }}
+            {{ form.button_add(class="btn") }}
+        </div>
+
+        <!-- Row 2 -->
+        <div>
+            {{ form.num4(class="btn") }}
+            {{ form.num5(class="btn") }}
+            {{ form.num6(class="btn") }}
+            {{ form.button_subtract(class="btn") }}
+        </div>
+
+        <!-- Row 3 -->
+        <div>
+            {{ form.num7(class="btn") }}
+            {{ form.num8(class="btn") }}
+            {{ form.num9(class="btn") }}
+            {{ form.button_multiply(class="btn") }}
+        </div>
+
+        <!-- Row 4 -->
+        <div>
+            {{ form.num0(class="btn") }}
+            {{ form.button_divide(class="btn") }}
+            {{ form.button_clear(class="btn btn-clear") }}
+            {{ form.button_equal(class="btn btn-equal") }}
+        </div>
+    </form>
+    <div class="history">
+        <p><a href="{{ url_for('history_page') }}">History</a></p>
+    </div>
+</body>
+</html>

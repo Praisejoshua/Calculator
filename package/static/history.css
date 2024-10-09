@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light background color */
+    margin: 0; /* Remove default margin */
+    padding: 20px; /* Add padding around the body */
+}
+
+h2 {
+    text-align: center; /* Center the heading */
+    color: #333; /* Darker color for the heading */
+    margin-bottom: 20px; /* Spacing below the heading */
+}
+
+.history-container {
+    max-width: 600px; /* Set a max width for the table */
+    margin: 0 auto; /* Center the container */
+    background-color: #ffffff; /* White background for the table */
+    padding: 20px; /* Padding inside the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+table {
+    width: 100%; /* Full width table */
+    border-collapse: collapse; /* Remove space between borders */
+}
+
+th, td {
+    padding: 12px; /* Padding inside table cells */
+    text-align: left; /* Left align text */
+    border-bottom: 1px solid #ddd; /* Light bottom border */
+}
+
+th {
+    background-color: #007bff; /* Blue background for header */
+    color: white; /* White text for header */
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1; /* Light gray background on row hover */
+}
+
+.back-link {
+    text-align: center; /* Center the link */
+    margin: 20px 0; /* Add margin for spacing */
+}
+
+.back-link a {
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Font size */
+    color: #007bff; /* Link color */
+    transition: color 0.3s; /* Transition for hover effect */
+}
+
+.back-link a:hover {
+    color: #0056b3; /* Darker color on hover */
+}
