@@ -46,6 +46,11 @@
             {{ form.button_clear(class="btn btn-clear") }}
             {{ form.button_equal(class="btn btn-equal") }}
         </div>
+        <!-- Row 5 - New Row for Cosine and Sine -->
+        <div>
+            {{ form.button_cos(class="btn") }} {{ form.button_sin(class="btn") }}
+            {{ form.button_close_paren(class="btn") }} 
+        </div>
     </form>
     <div class="history">
         <p><a href="{{ url_for('history_page') }}">History</a></p>

@@ -1,3 +1,4 @@
+import math  # Import the math library
 from package import app, request, render_template
 from package.forms import Calculator
 from package.models import Database  # Make sure this is your calculation model
@@ -44,10 +45,23 @@ def calculator():
         # Clear expression
         elif form.button_clear.data:
             expression = ""
+
+        # Handle cosine function
+        elif form.button_cos.data:
+            expression += "math.cos("  # Append the cos function
+
+        # Handle sine function
+        elif form.button_sin.data:
+            expression += "math.sin("  # Append the sin function
         
+        # Close parenthesis if needed
+        elif form.button_close_paren.data:
+            expression += ")"
+
         # Calculate the result when '=' is pressed
         elif form.button_equal.data:
             try:
+                # Use eval to calculate the result
                 result = eval(expression)  
                 expression = str(result)
                 calculation = Database(expression=expression, result=str(result))  # Save to database
@@ -65,4 +79,4 @@ def calculator():
 @app.route("/history", methods=['GET'])
 def history_page():
     calculations = Database.query.all() 
-    return render_template("history.html", calculations=calculations) 
+    return render_template("history.html", calculations=calculations)

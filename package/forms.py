@@ -26,3 +26,10 @@ class Calculator(FlaskForm):
     button_clear = SubmitField("C")
     button_equal = SubmitField("=")
 
+    # cosine and sine buttons
+    button_cos = SubmitField('cos')
+    button_sin = SubmitField('sin')
+
+    
+   # Add the close parenthesis button here
+    button_close_paren = SubmitField(')')
